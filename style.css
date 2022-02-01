@@ -1,0 +1,290 @@
+/* вот тут подключили новый кастомный шрифт */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/* Звёздочка - это обращение ко всем элементам */
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: #f1f1f1;
+    color: #0f141e;
+
+    font-size: 20px;
+    font-weight:600;
+    font-family: 'Roboto', sans-serif;
+/* то что записано строчкой ниже, идентично тому что написано тремя строчками выше */
+    font: normal 16px  'Roboto', sans-serif;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+/* hover - состояние при наведений мышки */
+a:hover{
+    text-decoration: underline;
+}
+
+/* active - состояние в момент нажатия мышкой */
+a:active{
+    color: blue;
+}
+
+/* visited - состояние ссылки, которой мы посетили */
+a:visited{
+color: gray;
+}
+
+
+/* РАЗНИЦА МЕЖДУ ID И CLASS - В ТОМ ЧТО ID УНИКАЛЕН, А ВОТ КЛАССЫ МОГУТ ПОВТОРЯТЬСЯ */
+/* ВМЕСТО ТОЧКИ, ПЕРЕД ID СТАВИТЬСЯ # */
+/* перед классами селекторов ставиться точка */
+.avatar{
+    width: 200px;
+    border-radius: 28px;
+    box-shadow: 4px 4px 14px rgba(0, 0, 0, 0.25);
+}
+
+
+.info{
+    display: flex;
+    margin-bottom: 20px;
+}
+
+
+
+
+
+
+/* АДАПТИВ ОПИСАН ЗДЕСЬ */
+@media (max-width: 700px) {
+    .info{
+        text-align: center;
+        display:block;
+    }
+}
+
+
+
+.info-text{
+    margin-left: 40px;
+}
+
+
+.info-text h4{
+    margin-bottom: 10px;
+    
+}
+
+.info p{
+    color: #86898f;
+    margin: 0;
+    font-style: italic;
+    font-weight: bold;
+    text-decoration: none;
+    /* text-transform: uppercase; */
+    /* letter-spacing: 1px; */
+    /* word-spacing: 42px; */
+}
+
+
+
+/* Box model  */
+.cotainer{
+    max-width: 750px;
+    margin: auto;
+    padding-top: 30px;
+}
+
+
+
+
+/* .social {
+    background: rgb(0, 255, 213); */
+    /* padding: 15px; */
+    /* padding: 15px 40px; */
+    /* padding: 15px 20px 25px 30px; */
+    /* padding-top: 15px;
+    padding-right: 20px;
+    padding-bottom: 25px;
+    padding-left: 30px; */
+    /* margin: 20px;
+    border: 5px solid rgb(0, 60, 255);
+    border-bottom-style: dashed;
+    border-top-width: 15px;
+    border-right-color: magenta;
+} */
+
+
+/* > перед div, может сделать так, что бы параметры
+применялись только к дочерним дивам первичного дива
+с классом box model, но не к их собственным дочерним
+   файлам */
+
+
+   /* > = только дети (но не их дети) будут перенимать стили */
+/* .box-model > div{
+    float: left;
+    background: black;
+    height: 200px;
+    width: 25%;
+    border: 4px solid red;
+    box-sizing: border-box;
+} */
+
+.bg-yellow{
+    background: #fff9dc;
+}
+.bg-green{
+    background: #e5ffe7;
+}
+.bg-red{
+    background: #ffe5e5;
+}
+
+.bg-red2{
+    margin-bottom: 20px;
+}
+
+
+.card{
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+}
+
+
+.card h2{
+    margin-bottom: 10px;
+}
+
+.list{
+    padding: 0px 20px;
+    /* list style - none : убрал цифры из списка */
+    /* list-style: none; */
+}
+
+.list li{
+    color: #86898f;
+    margin-bottom: 10px;
+    border-bottom: 1px solid grey;
+}
+
+
+.table {
+    width: 100%;
+}
+
+.table td {
+    padding-bottom: 10px;
+}
+
+
+/* Псевдоселектор позволяющий выбрать по номеру дочерний элемент */
+.table td:nth-child(2),.table td:nth-child(3){
+    color: #86898f;
+}
+
+
+/* .table tr:nth-child(even){
+    background: red;
+} */
+
+
+
+.link-list {
+    list-style: none;
+    padding: 0;
+}
+
+.link-list li {
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #ccc;
+}
+
+
+
+
+
+.contact h2{
+    text-align: center;
+}
+
+.form-group label{
+    /* display block - заставляет строчные элементы принимать свойства блочных */
+    display: block;
+    font-size: 14px;
+    color: #8689f8;
+}
+
+
+.form-group input,
+.form-group textarea {
+    width:100%;
+    box-sizing: border-box;
+    border:none;
+    background: transparent;
+    border-bottom: 1px solid #ccc;
+    color: rgb(0, 0, 0);
+    padding: 15px 0 10px;
+    outline: none;
+    font-family: inherit;
+}
+
+
+
+.row{
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.row > .form-group{
+    width: 50%;
+    margin-right: 20px;
+}
+
+.row > .form-group:last-child{
+    margin-right: 0px;
+}
+
+.btn{
+    background: #111;
+    padding: 15px 20px;
+    color: #fff;
+    border: none;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+
+.btn:hover{
+    opacity: 0.9;
+}
+
+
+
+/* Position */
+/* 
+.position {
+    position: relative;
+    border: 4px solid black;
+    margin-top: 40px;
+    padding: 20px;
+    height: 300px;
+}
+
+.box {
+    position: fixed;
+top: 0;
+    left: 0px;
+    /* bottom: 150px;
+    left: 0px; */
+/* width: 100%;
+height: 50px;
+    background: lightcoral;
+} */ 
